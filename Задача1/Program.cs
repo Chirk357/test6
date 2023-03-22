@@ -1,4 +1,4 @@
 ﻿// # Пишу программу;
 // **Github** будет
 
-string[] array
+string[] array = [3];
