@@ -3,12 +3,12 @@
 
 
 
-string[] Array = new string[5] {"window", "89", "1", "846352", "764"};
+string[] Array = new string[5] {"window", "89", "1", "846352", "764"}; // Задаем массив из строк
 
-string[] CountAndResultArray(string[] Array, int countOfSymbols) 
+string[] CountAndResultArray(string[] Array, int countOfSymbols) // Созадем метод, который будет считать кол-во символов в слове
 {
-    int[] defineQuantityOfSymbols = new int[Array.Length];
-    int count = 0;
+    int[] defineQuantityOfSymbols = new int[Array.Length]; // создаем массив целых чисел с переменной count для подсчета кол-ва символом
+    int count = 0; 
     for(int i = 0; i < Array.Length; i++)
     {
         if(Array[i].Length <= countOfSymbols)
@@ -26,18 +26,13 @@ string[] CountAndResultArray(string[] Array, int countOfSymbols)
 }
 
 
-Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 3))}]");
-Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 2))}]");
-Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 1))}]");
+string[] Array2 = new string[5] {"1", "Ok", "timeless", "93820183746", "run"};
+Console.WriteLine($"[{string.Join(", ", Array2)}] -> [{string.Join(", ", CountAndResultArray(Array2, 3))}]");
 
-// string str = "abcdefg";
-// Console.WriteLine("The length of '{0}' is {1}", str, str.Length);
-// Console.WriteLine("The length of '{0}' is {1}", "xyz", "xyz".Length);
+string[] Array3 = new string[5] {"Divan", "vaza", "93", "Ika", "uha"};
+Console.WriteLine($"[{string.Join(", ", Array3)}] -> [{string.Join(", ", CountAndResultArray(Array3, 2))}]");
 
-// int length = str.Length;
-// Console.WriteLine("The length of '{0}' is {1}", str, length);
+string[] Array4 = new string[3] {"7", "5", "juke"};
+Console.WriteLine($"[{string.Join(", ", Array4)}] -> [{string.Join(", ", CountAndResultArray(Array4, 1))}]");
 
-// // This example displays the following output:
-// //    1) The length of 'abcdefg' is 7
-// //    2) The length of 'xyz' is 3
-// //    3) The length of 'abcdefg' is 7
+
