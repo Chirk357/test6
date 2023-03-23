@@ -5,9 +5,10 @@
 
 string[] Array = new string[5] {"window", "89", "1", "846352", "764"}; // Задаем массив из строк
 
-string[] CountAndResultArray(string[] Array, int countOfSymbols) // Созадем метод, который будет считать кол-во символов в слове
+string[] CountAndResultArray(string[] Array, int countOfSymbols) // Созадем метод, который будет считать кол-во символов в слове и выдаст результирующий массив строк
 {
-    int[] defineQuantityOfSymbols = new int[Array.Length]; // создаем массив целых чисел с переменной count для подсчета кол-ва символом
+    int[] defineQuantityOfSymbols = new int[Array.Length]; // создаем массив целых чисел с переменной count и циклом для подсчета кол-ва символом в слове
+    
     int count = 0; 
     for(int i = 0; i < Array.Length; i++)
     {
@@ -17,7 +18,8 @@ string[] CountAndResultArray(string[] Array, int countOfSymbols) // Созаде
             count++;
         }
     }
-    string[] newArray = new string[count];
+
+    string[] newArray = new string[count]; // Создаем результирующий массив строк с, используя результат предыдущего блока кода
     for(int i = 0; i < count; i++)
     {
         newArray[i] = Array[defineQuantityOfSymbols[i]];
