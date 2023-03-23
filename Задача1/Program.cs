@@ -3,34 +3,32 @@
 
 
 
-string[] Array = new string[5] {"window", "89", "sun", "846352", "764"};
+string[] Array = new string[5] {"window", "89", "1", "846352", "764"};
 
 string[] CountAndResultArray(string[] Array, int countOfSymbols) 
 {
-    int[] itemNumDegreeId = new int[Array.Length];
-    int countOfItems = 0;
+    int[] defineQuantityOfSymbols = new int[Array.Length];
+    int count = 0;
     for(int i = 0; i < Array.Length; i++)
     {
         if(Array[i].Length <= countOfSymbols)
         {
-            itemNumDegreeId[countOfItems] = i;
-            countOfItems++;
+            defineQuantityOfSymbols[count] = i;
+            count++;
         }
     }
-    string[] resultArray = new string[countOfItems];
-    for(int i = 0; i < countOfItems; i++)
+    string[] newArray = new string[count];
+    for(int i = 0; i < count; i++)
     {
-        resultArray[i] = Array[itemNumDegreeId[i]];
+        newArray[i] = Array[defineQuantityOfSymbols[i]];
     }
-    return resultArray;
+    return newArray;
 }
 
 
-
-
-Console.WriteLine($"[{string.Join(",",Array)}]->[{string.Join(",", CountAndResultArray(Array, 3))}]");
-Console.WriteLine($"[{string.Join(",",Array)}]->[{string.Join(",", CountAndResultArray(Array, 2))}]");
-Console.WriteLine($"[{string.Join(",",Array)}]->[{string.Join(",", CountAndResultArray(Array, 1))}]");
+Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 3))}]");
+Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 2))}]");
+Console.WriteLine($"[{string.Join(", " ,Array)}]->[{string.Join(", " , CountAndResultArray(Array, 1))}]");
 
 // string str = "abcdefg";
 // Console.WriteLine("The length of '{0}' is {1}", str, str.Length);
